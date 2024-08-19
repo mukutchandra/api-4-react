@@ -4,9 +4,9 @@ import TableNameWithButton from './TableNameWithButton';
 import './Main.css';
 
 const Main = () => {
-    const [selectedDatabaseType, setSelectedDatabaseType] = useState('');
-    const [selectedSchema, setSelectedSchema] = useState('');
-    const [selectedEnvironment, setSelectedEnvironment] = useState('');
+    const [selectedDatabaseType, setSelectedDatabaseType] = useState('Snowflake');
+    const [selectedSchema, setSelectedSchema] = useState('NROUI');
+    const [selectedEnvironment, setSelectedEnvironment] = useState('QA');
     const [inputValue, setInputValue] = useState('');
     const [result, setResult] = useState(null);
 
@@ -61,7 +61,7 @@ const Main = () => {
       <Dropdown id="schemaDropdown" onChange={handleSchemaChange} options={['NROUI', 'RFEDB']} />
       
       <label className="label" htmlFor="environmentDropdown">Environment</label>
-      <Dropdown id="environmentDropdown" onChange={handleEnvironmentChange} options={['DEV', 'QA']} />
+      <Dropdown id="environmentDropdown" onChange={handleEnvironmentChange} options={['QA']} />
       
       <label className="label" htmlFor="textbox">Table Name</label>
       <TableNameWithButton 
